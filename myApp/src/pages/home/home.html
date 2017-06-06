@@ -2,7 +2,7 @@
   <ion-navbar>
     <ion-title>Home</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="presentPopover($event)">
+      <button ion-button icon-only (click)="addEventSegue()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -10,9 +10,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item }}
-    </button>  
-  </ion-list>
+  <ion-card *ngFor="let item of items">
+    <img attr.src="{{item.thumbnail.path + '/landscape_medium.' + item.thumbnail.extension}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ item.name }}
+        </ion-card-title>
+      <p>
+        {{ item.description }}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
