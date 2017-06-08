@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 import { NotificationPage } from '../pages/notification/notification';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { AddEventPage } from '../pages/add-event/add-event';
+import { DetailsPage } from '../pages/details/details';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +19,7 @@ import { HttpModule } from '@angular/http';
     NotificationPage,
     HomePage,
     TabsPage,
-    AddEventPage
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { HttpModule } from '@angular/http';
     NotificationPage,
     HomePage,
     TabsPage,
-    AddEventPage
+    DetailsPage
   ],
   providers: [
     StatusBar,

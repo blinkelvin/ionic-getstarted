@@ -9,9 +9,9 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content (click)="detailsSegue()">
   <ion-card *ngFor="let item of items">
-    <img attr.src="{{item.thumbnail.path + '/landscape_medium.' + item.thumbnail.extension}}"/>
+    <img attr.src="{{item.thumbnail.path + '/landscape_incredible.' + item.thumbnail.extension}}"/>
     <ion-card-content>
       <ion-card-title>
         {{ item.name }}
@@ -21,4 +21,9 @@
       </p>
     </ion-card-content>
   </ion-card>
+  
+ <ion-infinite-scroll (ionInfinite)="getDadosScroll($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
 </ion-content>
