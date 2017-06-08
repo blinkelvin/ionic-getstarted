@@ -1,0 +1,1 @@
+export const apiUrl: string = "http://gateway.marvel.com/v1/public/"

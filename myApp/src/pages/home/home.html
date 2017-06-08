@@ -22,8 +22,8 @@
     </ion-card-content>
   </ion-card>
   
- <ion-infinite-scroll (ionInfinite)="getDadosScroll($event)">
-   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ <ion-infinite-scroll (ionInfinite)="$event.waitFor(getCharacters($event))">
+   <ion-infinite-scroll-content>arregando...</ion-infinite-scroll-content>
  </ion-infinite-scroll>
 
 </ion-content>
